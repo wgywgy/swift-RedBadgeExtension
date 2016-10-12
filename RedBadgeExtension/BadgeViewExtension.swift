@@ -43,13 +43,13 @@ extension UIView {
     func initBadgeView() {
         if redDotBadge == nil {
             redDotBadge = UIView()
-            redDotBadge.backgroundColor = badgeColor ?? UIColor.redColor()
+            redDotBadge.backgroundColor = badgeColor ?? UIColor.red
             redDotBadge.layer.masksToBounds = true
-            redDotBadge.userInteractionEnabled = false
+            redDotBadge.isUserInteractionEnabled = false
         }
     }
     
-    func showBadge(radius: CGFloat = 12, offset: CGPoint = CGPoint(x: -4, y: -4)) {
+    func showBadge(_ radius: CGFloat = 12, offset: CGPoint = CGPoint(x: -4, y: -4)) {
         initBadgeView()
         redDotBadge.removeFromSuperview()
         self.addSubview(redDotBadge)
